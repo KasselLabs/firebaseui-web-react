@@ -1,7 +1,7 @@
 {
-  "name": "react-firebaseui",
-  "version": "4.0.0",
-  "description": "React wrapper for firebaseui: Javascript library for customizable UI on top of Firebase SDK",
+  "name": "@kassellabs/react-firebaseui-cdn",
+  "version": "4.0.1",
+  "description": "React wrapper for firebaseui using CDN: Javascript library for customizable UI on top of Firebase SDK",
   "files": [
     "FirebaseAuth.d.ts",
     "FirebaseAuth.js",
@@ -28,13 +28,6 @@
     "url": "https://github.com/firebase/firebaseui-web-react.git"
   },
   "license": "Apache-2.0",
-  "peerDependencies": {
-    "react": ">=15 <17",
-    "firebase": ">=6.3.4 <8"
-  },
-  "dependencies": {
-    "firebaseui": "^4.1.0"
-  },
   "devDependencies": {
     "@types/react": "^16.3.2",
     "babel-cli": "^6.26.0",
@@ -63,7 +56,9 @@
     "eslint-plugin-promise": "^3.7.0",
     "eslint-plugin-react": "^7.8.2",
     "eslint-plugin-standard": "^3.1.0",
-    "react": "^16.3.2",
+    "firebase": ">=6.3.4 <8",
+    "firebaseui": "^4.1.0",
+    "react": ">=15 <17",
     "style-loader": "^0.21.0",
     "webpack": "^4.8.3",
     "webpack-cli": "^3.0.0"

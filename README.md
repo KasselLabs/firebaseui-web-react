@@ -1,3 +1,13 @@
+# React FirebaseUI for CDN
+
+**Only use this package if you are using Firebase and FirebaseUI through CDN**
+
+This package is meant to allow the installation of `react-firebaseui` from NPM without depending on `firebaseui`.
+
+Our reason for this is due to some firebase building errors we've encountered on some platforms we use. This lead us to dropping the manual installation of Firebase and switching to use it on a CDN.
+
+This probably won't be your case if don't have any build errors with firebase.
+
 [![npm version](https://badge.fury.io/js/react-firebaseui.svg)](https://badge.fury.io/js/react-firebaseui)
 [![GitHub license](https://img.shields.io/github/license/firebase/firebaseui-web-react.svg)](https://github.com/Firebase/firebaseui-web-react/blob/master/LICENSE)
 
@@ -130,7 +140,7 @@ class SignInScreen extends React.Component {
         (user) => this.setState({isSignedIn: !!user})
     );
   }
-  
+
   // Make sure we un-register Firebase observers when the component unmounts.
   componentWillUnmount() {
     this.unregisterAuthObserver();

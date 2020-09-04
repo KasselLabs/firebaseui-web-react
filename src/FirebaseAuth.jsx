@@ -47,12 +47,12 @@ export default class FirebaseAuth extends React.Component {
    * @inheritDoc
    */
   componentDidMount() {
-    // Import the css only on the client.
-    require('firebaseui/dist/firebaseui.css');
-
     // Firebase UI only works on the Client. So we're loading the package in `componentDidMount`
     // So that this works when doing server-side rendering.
-    const firebaseui = require('firebaseui');
+    const firebaseui = typeof window !== 'undefined' ? window.firebaseui : null;
+    if (!firebaseui) {
+      return;
+    }
 
     // Wait in case the firebase UI instance is being deleted.
     // This can happen if you unmount/remount the element quickly.
